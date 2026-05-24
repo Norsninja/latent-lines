@@ -1,0 +1,568 @@
+{
+  "_schema": "publish_build_state_v01",
+  "_generated_at": "2026-05-24T22:02:18+00:00",
+  "performance": {
+    "lifetime_return_pct": 287.56,
+    "lifetime_inception_date": "2018-01-31",
+    "lifetime_months_tracked": 95,
+    "since_active_return_pct": 322.27,
+    "since_active_inception_date": "2023-10-31",
+    "since_active_months_tracked": 31,
+    "cmu_return_pct": 1.88,
+    "cmu_baseline_date": "2026-05-11",
+    "cmu_unit_ratio": 1.0188,
+    "benchmarks": {},
+    "last_updated": "2026-05-24T22:02:18+00:00"
+  },
+  "holdings": [
+    {
+      "symbol": "PL",
+      "name": "PL",
+      "weight_pct": 29.74,
+      "return_pct_since_entry": 924.42,
+      "entry_month": "2024-07",
+      "tranche": "Anchor",
+      "thesis_node": "space_eo"
+    },
+    {
+      "symbol": "RKLB",
+      "name": "RKLB",
+      "weight_pct": 12.88,
+      "return_pct_since_entry": 400.1,
+      "entry_month": "2024-07",
+      "tranche": "Anchor",
+      "thesis_node": "space_launch"
+    },
+    {
+      "symbol": "BKSY",
+      "name": "BKSY",
+      "weight_pct": 10.12,
+      "return_pct_since_entry": 757.16,
+      "entry_month": "2023-20",
+      "tranche": "T2",
+      "thesis_node": "space_eo"
+    },
+    {
+      "symbol": "D",
+      "name": "D",
+      "weight_pct": 7.35,
+      "return_pct_since_entry": 8.28,
+      "entry_month": "2026-05",
+      "tranche": "Vault",
+      "thesis_node": "vault_utility"
+    },
+    {
+      "symbol": "LUNR",
+      "name": "LUNR",
+      "weight_pct": 6.14,
+      "return_pct_since_entry": 472.56,
+      "entry_month": "2024 or",
+      "tranche": "T2",
+      "thesis_node": "space_lunar"
+    },
+    {
+      "symbol": "URG",
+      "name": "URG",
+      "weight_pct": 5.47,
+      "return_pct_since_entry": -10.58,
+      "entry_month": "2026-04",
+      "tranche": "T1",
+      "thesis_node": "nuclear_fuel"
+    },
+    {
+      "symbol": "LEU",
+      "name": "LEU",
+      "weight_pct": 5.25,
+      "return_pct_since_entry": -4.61,
+      "entry_month": "2026-05",
+      "tranche": "T3",
+      "thesis_node": "nuclear_enrichment"
+    },
+    {
+      "symbol": "UUUU",
+      "name": "UUUU",
+      "weight_pct": 4.94,
+      "return_pct_since_entry": -10.15,
+      "entry_month": "2024 or",
+      "tranche": "T2",
+      "thesis_node": "nuclear_fuel"
+    },
+    {
+      "symbol": "WRN",
+      "name": "WRN",
+      "weight_pct": 3.47,
+      "return_pct_since_entry": -13.65,
+      "entry_month": "2026-05",
+      "tranche": "T1",
+      "thesis_node": "copper"
+    },
+    {
+      "symbol": "UAMY",
+      "name": "UAMY",
+      "weight_pct": 3.1,
+      "return_pct_since_entry": -2.52,
+      "entry_month": "2026-01",
+      "tranche": "T2",
+      "thesis_node": "critical_minerals"
+    },
+    {
+      "symbol": "DNN",
+      "name": "DNN",
+      "weight_pct": 2.35,
+      "return_pct_since_entry": 17.16,
+      "entry_month": "2025-09",
+      "tranche": "T1",
+      "thesis_node": "nuclear_fuel"
+    },
+    {
+      "symbol": "WM",
+      "name": "WM",
+      "weight_pct": 1.99,
+      "return_pct_since_entry": 1.19,
+      "entry_month": "2026-05",
+      "tranche": "Vault",
+      "thesis_node": "vault_services"
+    },
+    {
+      "symbol": "HL",
+      "name": "HL",
+      "weight_pct": 1.64,
+      "return_pct_since_entry": 178.02,
+      "entry_month": "2024 or",
+      "tranche": "T2",
+      "thesis_node": "precious_metals"
+    },
+    {
+      "symbol": "LYSDY",
+      "name": "LYSDY",
+      "weight_pct": 1.58,
+      "return_pct_since_entry": 30.04,
+      "entry_month": "2024 or",
+      "tranche": "T2",
+      "thesis_node": "critical_minerals"
+    },
+    {
+      "symbol": "MP",
+      "name": "MP",
+      "weight_pct": 1.52,
+      "return_pct_since_entry": 15.73,
+      "entry_month": "2025-11",
+      "tranche": "T2",
+      "thesis_node": "critical_minerals"
+    },
+    {
+      "symbol": "RDW",
+      "name": "RDW",
+      "weight_pct": 1.24,
+      "return_pct_since_entry": 63.84,
+      "entry_month": "2026-01",
+      "tranche": "Probe",
+      "thesis_node": "space_manufacturing"
+    },
+    {
+      "symbol": "YSS",
+      "name": "YSS",
+      "weight_pct": 0.69,
+      "return_pct_since_entry": -23.61,
+      "entry_month": "2026-01",
+      "tranche": "Probe",
+      "thesis_node": "defense_space"
+    },
+    {
+      "symbol": "REA",
+      "name": "REA",
+      "weight_pct": 0.51,
+      "return_pct_since_entry": -3.67,
+      "entry_month": "2026-05",
+      "tranche": "Probe",
+      "thesis_node": "critical_minerals"
+    }
+  ],
+  "methodology": {
+    "inception_date": "2018-01-31",
+    "months_tracked": 95,
+    "cmu_baseline_date": "2026-05-11",
+    "cash_in_share_of_allocated_pct": 52.92,
+    "recycled_share_of_allocated_pct": 47.08
+  },
+  "sparkline": [
+    {
+      "date": "2023-10-31",
+      "cumulative_return_pct": 0.0
+    },
+    {
+      "date": "2023-11-30",
+      "cumulative_return_pct": 2.16
+    },
+    {
+      "date": "2023-12-31",
+      "cumulative_return_pct": 17.04
+    },
+    {
+      "date": "2024-01-31",
+      "cumulative_return_pct": -6.67
+    },
+    {
+      "date": "2024-02-29",
+      "cumulative_return_pct": 6.86
+    },
+    {
+      "date": "2024-03-31",
+      "cumulative_return_pct": 0.35
+    },
+    {
+      "date": "2024-04-30",
+      "cumulative_return_pct": -11.73
+    },
+    {
+      "date": "2024-05-31",
+      "cumulative_return_pct": -0.04
+    },
+    {
+      "date": "2024-06-30",
+      "cumulative_return_pct": 11.68
+    },
+    {
+      "date": "2024-07-31",
+      "cumulative_return_pct": 9.93
+    },
+    {
+      "date": "2024-08-31",
+      "cumulative_return_pct": 12.89
+    },
+    {
+      "date": "2024-09-30",
+      "cumulative_return_pct": 29.49
+    },
+    {
+      "date": "2024-10-31",
+      "cumulative_return_pct": 30.31
+    },
+    {
+      "date": "2024-11-30",
+      "cumulative_return_pct": 107.23
+    },
+    {
+      "date": "2024-12-31",
+      "cumulative_return_pct": 119.73
+    },
+    {
+      "date": "2025-01-31",
+      "cumulative_return_pct": 130.81
+    },
+    {
+      "date": "2025-02-28",
+      "cumulative_return_pct": 74.84
+    },
+    {
+      "date": "2025-03-31",
+      "cumulative_return_pct": 33.99
+    },
+    {
+      "date": "2025-04-30",
+      "cumulative_return_pct": 9.89
+    },
+    {
+      "date": "2025-05-31",
+      "cumulative_return_pct": 18.0
+    },
+    {
+      "date": "2025-06-30",
+      "cumulative_return_pct": 44.95
+    },
+    {
+      "date": "2025-07-31",
+      "cumulative_return_pct": 149.97
+    },
+    {
+      "date": "2025-08-31",
+      "cumulative_return_pct": 174.12
+    },
+    {
+      "date": "2025-09-30",
+      "cumulative_return_pct": 202.89
+    },
+    {
+      "date": "2025-10-31",
+      "cumulative_return_pct": 178.89
+    },
+    {
+      "date": "2025-11-30",
+      "cumulative_return_pct": 129.87
+    },
+    {
+      "date": "2025-12-31",
+      "cumulative_return_pct": 200.86
+    },
+    {
+      "date": "2026-01-31",
+      "cumulative_return_pct": 219.53
+    },
+    {
+      "date": "2026-02-28",
+      "cumulative_return_pct": 197.92
+    },
+    {
+      "date": "2026-03-31",
+      "cumulative_return_pct": 200.03
+    },
+    {
+      "date": "2026-04-30",
+      "cumulative_return_pct": 255.93
+    }
+  ],
+  "benchmark_series": {
+    "cmu_broad": [
+      {
+        "date": "2023-10-31",
+        "value": 0.0
+      },
+      {
+        "date": "2023-11-30",
+        "value": 12.64
+      },
+      {
+        "date": "2023-12-31",
+        "value": 19.14
+      },
+      {
+        "date": "2024-01-31",
+        "value": 19.14
+      },
+      {
+        "date": "2024-02-29",
+        "value": 24.37
+      },
+      {
+        "date": "2024-03-31",
+        "value": 27.39
+      },
+      {
+        "date": "2024-04-30",
+        "value": 21.56
+      },
+      {
+        "date": "2024-05-31",
+        "value": 26.82
+      },
+      {
+        "date": "2024-06-30",
+        "value": 29.02
+      },
+      {
+        "date": "2024-07-31",
+        "value": 33.54
+      },
+      {
+        "date": "2024-08-31",
+        "value": 34.73
+      },
+      {
+        "date": "2024-09-30",
+        "value": 36.52
+      },
+      {
+        "date": "2024-10-31",
+        "value": 35.14
+      },
+      {
+        "date": "2024-11-30",
+        "value": 44.54
+      },
+      {
+        "date": "2024-12-31",
+        "value": 38.49
+      },
+      {
+        "date": "2025-01-31",
+        "value": 42.2
+      },
+      {
+        "date": "2025-02-28",
+        "value": 38.86
+      },
+      {
+        "date": "2025-03-31",
+        "value": 31.04
+      },
+      {
+        "date": "2025-04-30",
+        "value": 29.39
+      },
+      {
+        "date": "2025-05-31",
+        "value": 36.47
+      },
+      {
+        "date": "2025-06-30",
+        "value": 42.74
+      },
+      {
+        "date": "2025-07-31",
+        "value": 45.13
+      },
+      {
+        "date": "2025-08-31",
+        "value": 49.73
+      },
+      {
+        "date": "2025-09-30",
+        "value": 54.1
+      },
+      {
+        "date": "2025-10-31",
+        "value": 57.73
+      },
+      {
+        "date": "2025-11-30",
+        "value": 58.04
+      },
+      {
+        "date": "2025-12-31",
+        "value": 57.48
+      },
+      {
+        "date": "2026-01-31",
+        "value": 61.23
+      },
+      {
+        "date": "2026-02-28",
+        "value": 60.52
+      },
+      {
+        "date": "2026-03-31",
+        "value": 52.78
+      },
+      {
+        "date": "2026-04-30",
+        "value": 68.41
+      }
+    ],
+    "tmu_thesis": [
+      {
+        "date": "2023-10-31",
+        "value": 0.0
+      },
+      {
+        "date": "2023-11-30",
+        "value": 11.58
+      },
+      {
+        "date": "2023-12-31",
+        "value": 19.1
+      },
+      {
+        "date": "2024-01-31",
+        "value": 16.96
+      },
+      {
+        "date": "2024-02-29",
+        "value": 21.67
+      },
+      {
+        "date": "2024-03-31",
+        "value": 26.91
+      },
+      {
+        "date": "2024-04-30",
+        "value": 21.93
+      },
+      {
+        "date": "2024-05-31",
+        "value": 27.89
+      },
+      {
+        "date": "2024-06-30",
+        "value": 26.67
+      },
+      {
+        "date": "2024-07-31",
+        "value": 33.4
+      },
+      {
+        "date": "2024-08-31",
+        "value": 32.41
+      },
+      {
+        "date": "2024-09-30",
+        "value": 34.11
+      },
+      {
+        "date": "2024-10-31",
+        "value": 32.77
+      },
+      {
+        "date": "2024-11-30",
+        "value": 43.66
+      },
+      {
+        "date": "2024-12-31",
+        "value": 32.45
+      },
+      {
+        "date": "2025-01-31",
+        "value": 36.78
+      },
+      {
+        "date": "2025-02-28",
+        "value": 33.89
+      },
+      {
+        "date": "2025-03-31",
+        "value": 27.85
+      },
+      {
+        "date": "2025-04-30",
+        "value": 24.93
+      },
+      {
+        "date": "2025-05-31",
+        "value": 33.06
+      },
+      {
+        "date": "2025-06-30",
+        "value": 41.29
+      },
+      {
+        "date": "2025-07-31",
+        "value": 46.12
+      },
+      {
+        "date": "2025-08-31",
+        "value": 53.43
+      },
+      {
+        "date": "2025-09-30",
+        "value": 60.75
+      },
+      {
+        "date": "2025-10-31",
+        "value": 64.59
+      },
+      {
+        "date": "2025-11-30",
+        "value": 64.45
+      },
+      {
+        "date": "2025-12-31",
+        "value": 66.44
+      },
+      {
+        "date": "2026-01-31",
+        "value": 78.4
+      },
+      {
+        "date": "2026-02-28",
+        "value": 81.12
+      },
+      {
+        "date": "2026-03-31",
+        "value": 72.21
+      },
+      {
+        "date": "2026-04-30",
+        "value": 86.48
+      }
+    ]
+  }
+}

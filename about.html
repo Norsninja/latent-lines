@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About &middot; Latent Lines</title>
+  <link rel="stylesheet" href="/static/css/site.css?v=2026-05-24T22:02:18+00:00">
+  <meta name="description" content="Editorial publication by Mike C Singer. Pattern-recognition portfolio analysis. Intelligence pipeline by NewsPlanetAI.">
+</head>
+<body class="">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-title">Latent Lines</a>
+      <nav class="site-nav">
+        <a href="/briefs.html">Briefs</a>
+        <a href="/thesis.html">Thesis</a>
+        <a href="/wiki.html">Wiki</a>
+        <a href="/about.html">About</a>
+        <a href="/disclosure.html">Disclosure</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+<article class="content-page">
+  <h1>About</h1>
+<p>Latent Lines is the publication of an experiment. It is one person reading the world, building tools, holding positions, and showing the work.</p>
+<h2>Who is writing</h2>
+<p>I am <a href="https://michaelcsinger.com">Mike Singer</a>. I studied philosophy. I am not a finance professional and have no formal investment-management training.</p>
+<p>I have been building <a href="https://thetimedetectives.com">Time Detective's</a>, a project to bridge entertainment and history. Five years ago I began building <a href="https://newsplanetai.com">NewsPlanetAI</a> -- an apparatus that reads several hundred news articles per day and surfaces the slow geopolitical patterns underneath the daily noise. Both tools were built first for myself, then for people I have shared them with.</p>
+<p>This publication exists because I wanted to test a question the financial press largely answers in the negative: can a layman with very little capital, using accessible AI tools and a patient method, grow a portfolio by reading the world rather than reading the market? Five years and a series of conviction trades later, the answer is in progress -- which is why the portfolio is public.</p>
+<h2>The method, briefly</h2>
+<p><a href="https://newsplanetai.com">NewsPlanetAI</a> surfaces patterns. Per-ticker wikis carry the structural facts -- regulatory filings, contract awards, who pays whom. Per-counterparty wikis (the Department of War, the NRC, the Space Development Agency, China's MOFCOM) map which holdings move together when one of those nodes shifts. A set of hard rules governs how positions are sized, trimmed, and added to. Personal intuition, scuttlebutt, primary-source reading, and a philosophy of waiting fill the rest.</p>
+<p>The weekly brief is the synthesis in motion. It is what comes out of the apparatus on any given week.</p>
+<h2>How performance is measured</h2>
+<p>Two numbers, both shown on the hero block:</p>
+<ul>
+<li><strong>Since active trading began.</strong> Cash-flow-adjusted return anchored to October 2023. The Robinhood account opened in January 2018, but the 2018&ndash;2023 prologue was passive observation -- the balance lived in the $6&ndash;$10 band during the free-share-rewards era. The first real cash deposit landed November 2023; active trading begins then. Anchoring the headline to that inflection shows the trajectory of the method, not the five-year flatline that precedes it.</li>
+<li><strong>CMU unit ratio since the May 2026 baseline.</strong> Time-weighted, deposit-adjusted, sample size grows with time. This is the live system; the chart's benchmark overlay extends the same framework backward in time as a reconstruction (see <a href="#how-we-benchmark">How we benchmark</a>).</li>
+</ul>
+<p>The full math, including the convention used to separate price-driven returns from contribution-driven moves, is documented in the project repository.</p>
+<h2>How we benchmark</h2>
+<p>The chart on the landing page can overlay two composite baskets of ETFs alongside the portfolio line. Each basket answers a different question.</p>
+<p><strong>CMU-Broad</strong> -- <em>"would passive indexing have beaten me?"</em></p>
+<p>A weighted basket of broad US market ETFs. If the portfolio underperforms this line, the right move would have been to buy the index and go fishing.</p>
+<table>
+<thead>
+<tr>
+<th>ETF</th>
+<th style="text-align: right;">Weight</th>
+<th>What it tracks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SPY</td>
+<td style="text-align: right;">40%</td>
+<td>S&amp;P 500 -- the broadest opportunity-cost baseline</td>
+</tr>
+<tr>
+<td>IWM</td>
+<td style="text-align: right;">25%</td>
+<td>Russell 2000 -- small-cap, where uranium, copper, and rare-earth names live</td>
+</tr>
+<tr>
+<td>DIA</td>
+<td style="text-align: right;">15%</td>
+<td>Dow Jones -- the industrial / old-economy signal</td>
+</tr>
+<tr>
+<td>QQQ</td>
+<td style="text-align: right;">10%</td>
+<td>NASDAQ-100 -- the tech and liquidity-regime signal</td>
+</tr>
+<tr>
+<td>SGOV</td>
+<td style="text-align: right;">10%</td>
+<td>Short-term T-Bills -- the cash floor, the truly passive alternative</td>
+</tr>
+</tbody>
+</table>
+<p><strong>TMU-Thesis</strong> -- <em>"am I beating the sector universe my thesis claims to understand?"</em></p>
+<p>A weighted basket tilted toward the sectors the portfolio actually expresses convictions in. If the portfolio underperforms this line, a dumb sector-ETF basket would have done a better job than the active picks. This is the honest signal for whether the thesis is doing work.</p>
+<table>
+<thead>
+<tr>
+<th>ETF</th>
+<th style="text-align: right;">Weight</th>
+<th>What it tracks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IWM</td>
+<td style="text-align: right;">30%</td>
+<td>Small-cap base -- most positions live here</td>
+</tr>
+<tr>
+<td>SPY</td>
+<td style="text-align: right;">20%</td>
+<td>Broad US equity</td>
+</tr>
+<tr>
+<td>XLE</td>
+<td style="text-align: right;">15%</td>
+<td>Energy -- the uranium / energy-sovereignty thesis</td>
+</tr>
+<tr>
+<td>XME</td>
+<td style="text-align: right;">15%</td>
+<td>Metals and mining -- copper, rare-earth, silver</td>
+</tr>
+<tr>
+<td>ITA</td>
+<td style="text-align: right;">10%</td>
+<td>Aerospace and defense -- orbital infrastructure</td>
+</tr>
+<tr>
+<td>QQQ</td>
+<td style="text-align: right;">10%</td>
+<td>Tech / liquidity regime</td>
+</tr>
+</tbody>
+</table>
+<p>The formula in both cases is the same. For each ETF <em>i</em> in the basket, the cumulative ratio from the anchor date <em>t&#x2080;</em> to time <em>t</em> is <code>ratio_i(t) = close_i(t) / close_i(t0)</code>. The composite is the weighted sum: <code>composite(t) = &amp;Sigma; weight_i &amp;times; ratio_i(t)</code>. Converting to a percentage gives the line you see on the chart. Adjusted closing prices are used throughout, which incorporate dividends and splits -- the correct practical proxy for total-return when index total-return series aren't directly available.</p>
+<p><strong>A note on what's reconstructed.</strong> The live CMU system anchors to May&nbsp;11, 2026 -- the day the framework was instrumented. The benchmark overlay on the chart extends the same composite math backward to October&nbsp;31, 2023 so that "since active trading" has a benchmark to compare against. Pre-May-2026 values are reconstructed from ETF closes for that purpose; they are not retroactive instrument readings. The live system, and the live CMU unit ratio shown in the hero block, remain unchanged by this.</p>
+<p>The full spec, including the design rationale for separating CMU-Broad from TMU-Thesis (and the deliberate exclusion of XLE / XME / ITA from CMU-Broad to keep the passive baseline thesis-free), is in <code>project/docs/CMU_SPEC_v01.md</code> in the project repository.</p>
+<h2>Skin in the game</h2>
+<p>Every position discussed in the brief is one I hold. The full holdings list is at <a href="/disclosure.html">/disclosure</a>. I do not accept paid promotion of any security. I do not trade in the 48 hours surrounding publication of any post that names a specific ticker.</p>
+<h2>Cadence</h2>
+<p>Weekly minimum, irregular preferred. The publication's tempo is the synthesis's tempo, not the market's.</p>
+</article>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-disclosure">
+      Latent Lines is an editorial publication by <a href="https://michaelcsinger.com">Mike C Singer</a>. It is not investment
+      advice and not a solicitation to buy or sell any security. The author holds positions
+      in many of the securities discussed; complete current holdings are disclosed at
+      <a href="/disclosure.html">/disclosure</a>. Past performance does not indicate
+      future results. Do your own research and consult a licensed financial advisor before
+      making investment decisions. Intelligence pipeline by
+      <a href="https://newsplanetai.com">NewsPlanetAI</a>.
+    </p>
+    <p class="footer-meta">Data as of 2026-05-24T22:02:18+00:00.</p>
+  </footer>
+</body>
+</html>
