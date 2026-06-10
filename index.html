@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latent Lines</title>
+  <link rel="stylesheet" href="/static/css/site.css?v=2026-06-10T22:44:57+00:00">
+  <meta name="description" content="Editorial publication by Mike C Singer. Pattern-recognition portfolio analysis. Intelligence pipeline by NewsPlanetAI.">
+</head>
+<body class="landing">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-title">Latent Lines</a>
+      <nav class="site-nav">
+        <a href="/briefs.html">Briefs</a>
+        <a href="/thesis.html">Thesis</a>
+        <a href="/wiki.html">Wiki</a>
+        <a href="/about.html">About</a>
+        <a href="/disclosure.html">Disclosure</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+<section class="hero">
+  <h1 class="hero-headline">Latent Lines</h1>
+  <p class="hero-tagline">Decisions in the latent space.</p>
+  <p class="hero-byline">by <a href="https://michaelcsinger.com">Mike C Singer</a>. Intelligence pipeline by <a href="https://newsplanetai.com">NewsPlanetAI</a>.</p>
+</section>
+
+<hr class="hero-divider">
+
+<div class="landing-grid">
+
+  <aside class="landing-left">
+    <div class="landing-left-swap">
+      <div class="landing-primer" id="landing-primer">
+        <p class="landing-rail-label">How to read this page</p>
+        <p>The chart in the center is the cumulative receipt of a four-year geopolitical-pattern method. Each point on the line is a month&rsquo;s close.</p>
+        <p>Click any point to query <a href="https://newsplanetai.com">NewsPlanetAI</a> for that period&rsquo;s briefings. The returned signal renders here, in this column.</p>
+        <p>The right column shows today&rsquo;s positions &mdash; the receipt for the conviction.</p>
+      </div>
+      <div class="landing-readout" id="landing-readout" hidden>
+        <p class="landing-rail-label">From the pipeline</p>
+        <p class="readout-period" id="readout-period"></p>
+        <p class="readout-context" id="readout-context"></p>
+
+        <p class="readout-status readout-loading" id="readout-loading" hidden>Loading&hellip;</p>
+        <p class="readout-status readout-error" id="readout-error" hidden>NewsPlanetAI unavailable, try again.</p>
+        <p class="readout-status readout-empty" id="readout-empty" hidden>NewsPlanetAI briefings begin August 2025 &mdash; earlier periods unavailable.</p>
+
+        <ul class="readout-briefings" id="readout-briefings" hidden></ul>
+
+        <p class="readout-back-wrap">
+          <button type="button" class="readout-back" id="readout-back">&larr; back to primer</button>
+        </p>
+      </div>
+    </div>
+
+    <p class="landing-attribution">Powered by <a href="https://newsplanetai.com">NewsPlanetAI.com</a></p>
+  </aside>
+
+  <div class="landing-center">
+
+    <div class="hero-stats">
+      <div class="hero-stat hero-stat-cmu">
+        <p class="hero-stat-label">Current regime &middot; CMU</p>
+        <p class="hero-stat-number">-20.38%</p>
+        <p class="hero-stat-context">since 2026-05-11</p>
+      </div>
+      <div class="hero-stat hero-stat-lifetime">
+        <p class="hero-stat-label">Since active trading began</p>
+        <p class="hero-stat-number hero-stat-number-secondary">+284.13%</p>
+        <p class="hero-stat-context">since 2023-10-31 &middot; 31 months</p>
+      </div>
+    </div>
+
+    <div class="hero-chart-wrapper">
+      <svg class="hero-chart" id="hero-chart-svg" width="720" height="240" viewBox="0 0 720 240" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cumulative return on net cash invested, monthly, 2023-10-31 through 2026-04-30."><line class="chart-grid" x1="14" x2="664" y1="214.00" y2="214.00" stroke="rgba(0, 0, 0, 0.05)" stroke-width="1" /><line class="chart-grid" x1="14" x2="664" y1="164.00" y2="164.00" stroke="rgba(0, 0, 0, 0.05)" stroke-width="1" /><line class="chart-grid" x1="14" x2="664" y1="114.00" y2="114.00" stroke="rgba(0, 0, 0, 0.05)" stroke-width="1" /><line class="chart-grid" x1="14" x2="664" y1="64.00" y2="64.00" stroke="rgba(0, 0, 0, 0.05)" stroke-width="1" /><line class="chart-grid" x1="14" x2="664" y1="14.00" y2="14.00" stroke="rgba(0, 0, 0, 0.05)" stroke-width="1" /><line class="chart-baseline" x1="14" x2="664" y1="196.10" y2="196.10" stroke="rgba(0, 0, 0, 0.18)" stroke-width="1" stroke-dasharray="2 3" /><path class="chart-area" d="M 14.00 196.10 L 14.00 196.10 L 35.38 194.71 L 57.48 185.12 L 79.57 200.40 L 100.24 191.68 L 122.33 195.87 L 143.71 203.66 L 165.81 196.13 L 187.19 188.58 L 209.29 189.70 L 231.38 187.80 L 252.76 177.10 L 274.86 176.58 L 296.24 127.03 L 318.33 118.97 L 340.43 111.84 L 360.38 147.89 L 382.48 174.20 L 403.86 189.73 L 425.95 184.50 L 447.33 167.14 L 469.43 99.50 L 491.52 83.94 L 512.90 65.41 L 535.00 80.87 L 556.38 112.44 L 578.47 66.71 L 600.57 54.69 L 620.52 68.61 L 642.62 67.25 L 664.00 31.24 L 664.00 196.10 Z" fill="rgba(26, 77, 140, 0.10)" stroke="none" /><path class="chart-line" d="M 14.00 196.10 L 35.38 194.71 L 57.48 185.12 L 79.57 200.40 L 100.24 191.68 L 122.33 195.87 L 143.71 203.66 L 165.81 196.13 L 187.19 188.58 L 209.29 189.70 L 231.38 187.80 L 252.76 177.10 L 274.86 176.58 L 296.24 127.03 L 318.33 118.97 L 340.43 111.84 L 360.38 147.89 L 382.48 174.20 L 403.86 189.73 L 425.95 184.50 L 447.33 167.14 L 469.43 99.50 L 491.52 83.94 L 512.90 65.41 L 535.00 80.87 L 556.38 112.44 L 578.47 66.71 L 600.57 54.69 L 620.52 68.61 L 642.62 67.25 L 664.00 31.24" fill="none" stroke="#1a4d8c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" /><text class="chart-x-label" x="58.19" y="230" fill="#5a5a5a" font-size="11" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" text-anchor="middle">2024</text><text class="chart-x-label" x="319.04" y="230" fill="#5a5a5a" font-size="11" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" text-anchor="middle">2025</text><text class="chart-x-label" x="579.19" y="230" fill="#5a5a5a" font-size="11" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" text-anchor="middle">2026</text><text class="chart-y-label" x="670" y="218.00" fill="#5a5a5a" font-size="11" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" text-anchor="start">−28%</text><text class="chart-y-label" x="670" y="168.00" fill="#5a5a5a" font-size="11" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" text-anchor="start">+50%</text><text class="chart-y-label" x="670" y="118.00" fill="#5a5a5a" font-size="11" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" text-anchor="start">+127%</text><text class="chart-y-label" x="670" y="68.00" fill="#5a5a5a" font-size="11" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" text-anchor="start">+205%</text><text class="chart-y-label" x="670" y="18.00" fill="#5a5a5a" font-size="11" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" text-anchor="start">+283%</text><g class="chart-cursor" aria-hidden="true"></g></svg>
+      <div class="hero-chart-readout" id="hero-chart-readout" hidden aria-hidden="true">
+        <p class="readout-date" id="hero-chart-readout-date"></p>
+        <p class="readout-value" id="hero-chart-readout-value"></p>
+        <p class="readout-benchmark" id="hero-chart-readout-benchmark" hidden></p>
+      </div>
+    </div>
+
+    <div class="chart-range-controls" id="chart-range-controls" hidden role="group" aria-label="Chart time range">
+      <button type="button" class="chart-range-btn" data-range="ytd" aria-pressed="false">YTD</button>
+      <button type="button" class="chart-range-btn" data-range="1y" aria-pressed="false">1Y</button>
+      <button type="button" class="chart-range-btn chart-range-btn-active" data-range="all" aria-pressed="true">All</button>
+    </div>
+
+    <div class="chart-benchmark-controls" id="chart-benchmark-controls" hidden role="group" aria-label="Benchmark overlay">
+      <span class="chart-benchmark-label">Compare against</span>
+      <button type="button" class="chart-benchmark-btn" data-benchmark="cmu_broad" aria-pressed="false">CMU-Broad</button>
+      <button type="button" class="chart-benchmark-btn" data-benchmark="tmu_thesis" aria-pressed="false">TMU-Thesis</button>
+    </div>
+
+    <p class="hero-chart-caption">Click any point to load that month&rsquo;s NewsPlanetAI briefings in the left column. Coverage begins August 2025.</p>
+
+    <p class="chart-benchmark-caption" id="chart-benchmark-caption" hidden></p>
+
+    <script type="application/json" id="hero-chart-data">{"width": 720, "height": 240, "pad": {"l": 14, "r": 56, "t": 14, "b": 26}, "plot": {"w": 650, "h": 200}, "stroke_color": "#1a4d8c", "bg_color": "#fdfdfb", "stroke_width": 1.6, "font_sans": "-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif", "colors": {"text_muted": "#5a5a5a", "accent": "#1a4d8c", "bg": "#fdfdfb", "area_fill": "rgba(26, 77, 140, 0.10)", "baseline": "rgba(0, 0, 0, 0.18)", "grid": "rgba(0, 0, 0, 0.05)", "brief_line": "rgba(26, 77, 140, 0.35)", "brief_dot": "rgba(26, 77, 140, 0.9)", "benchmark": "#9b8a6e"}, "points": [{"date": "2023-10-31", "value": 0.0, "px": 14.0, "py": 196.1}, {"date": "2023-11-30", "value": 2.16, "px": 35.38, "py": 194.71}, {"date": "2023-12-31", "value": 17.04, "px": 57.48, "py": 185.12}, {"date": "2024-01-31", "value": -6.67, "px": 79.57, "py": 200.4}, {"date": "2024-02-29", "value": 6.86, "px": 100.24, "py": 191.68}, {"date": "2024-03-31", "value": 0.35, "px": 122.33, "py": 195.87}, {"date": "2024-04-30", "value": -11.73, "px": 143.71, "py": 203.66}, {"date": "2024-05-31", "value": -0.04, "px": 165.81, "py": 196.13}, {"date": "2024-06-30", "value": 11.68, "px": 187.19, "py": 188.58}, {"date": "2024-07-31", "value": 9.93, "px": 209.29, "py": 189.7}, {"date": "2024-08-31", "value": 12.89, "px": 231.38, "py": 187.8}, {"date": "2024-09-30", "value": 29.49, "px": 252.76, "py": 177.1}, {"date": "2024-10-31", "value": 30.31, "px": 274.86, "py": 176.58}, {"date": "2024-11-30", "value": 107.23, "px": 296.24, "py": 127.03}, {"date": "2024-12-31", "value": 119.73, "px": 318.33, "py": 118.97}, {"date": "2025-01-31", "value": 130.81, "px": 340.43, "py": 111.84}, {"date": "2025-02-28", "value": 74.84, "px": 360.38, "py": 147.89}, {"date": "2025-03-31", "value": 33.99, "px": 382.48, "py": 174.2}, {"date": "2025-04-30", "value": 9.89, "px": 403.86, "py": 189.73}, {"date": "2025-05-31", "value": 18.0, "px": 425.95, "py": 184.5}, {"date": "2025-06-30", "value": 44.95, "px": 447.33, "py": 167.14}, {"date": "2025-07-31", "value": 149.97, "px": 469.43, "py": 99.5}, {"date": "2025-08-31", "value": 174.12, "px": 491.52, "py": 83.94}, {"date": "2025-09-30", "value": 202.89, "px": 512.9, "py": 65.41}, {"date": "2025-10-31", "value": 178.89, "px": 535.0, "py": 80.87}, {"date": "2025-11-30", "value": 129.87, "px": 556.38, "py": 112.44}, {"date": "2025-12-31", "value": 200.86, "px": 578.47, "py": 66.71}, {"date": "2026-01-31", "value": 219.53, "px": 600.57, "py": 54.69}, {"date": "2026-02-28", "value": 197.92, "px": 620.52, "py": 68.61}, {"date": "2026-03-31", "value": 200.03, "px": 642.62, "py": 67.25}, {"date": "2026-04-30", "value": 255.93, "px": 664.0, "py": 31.24}], "briefs": [], "brief_hrefs_by_date": {"2026-06-07": "/briefs/2026-06-07.html", "2026-05-31": "/briefs/2026-05-31.html", "2026-05-24": "/briefs/2026-05-24.html"}, "benchmark_series": {"cmu_broad": [{"date": "2023-10-31", "value": 0.0}, {"date": "2023-11-30", "value": 12.64}, {"date": "2023-12-31", "value": 19.14}, {"date": "2024-01-31", "value": 19.14}, {"date": "2024-02-29", "value": 24.37}, {"date": "2024-03-31", "value": 27.39}, {"date": "2024-04-30", "value": 21.56}, {"date": "2024-05-31", "value": 26.82}, {"date": "2024-06-30", "value": 29.02}, {"date": "2024-07-31", "value": 33.54}, {"date": "2024-08-31", "value": 34.73}, {"date": "2024-09-30", "value": 36.52}, {"date": "2024-10-31", "value": 35.14}, {"date": "2024-11-30", "value": 44.54}, {"date": "2024-12-31", "value": 38.49}, {"date": "2025-01-31", "value": 42.2}, {"date": "2025-02-28", "value": 38.86}, {"date": "2025-03-31", "value": 31.04}, {"date": "2025-04-30", "value": 29.39}, {"date": "2025-05-31", "value": 36.47}, {"date": "2025-06-30", "value": 42.74}, {"date": "2025-07-31", "value": 45.13}, {"date": "2025-08-31", "value": 49.73}, {"date": "2025-09-30", "value": 54.1}, {"date": "2025-10-31", "value": 57.73}, {"date": "2025-11-30", "value": 58.04}, {"date": "2025-12-31", "value": 57.48}, {"date": "2026-01-31", "value": 61.23}, {"date": "2026-02-28", "value": 60.52}, {"date": "2026-03-31", "value": 52.78}, {"date": "2026-04-30", "value": 68.41}], "tmu_thesis": [{"date": "2023-10-31", "value": 0.0}, {"date": "2023-11-30", "value": 11.58}, {"date": "2023-12-31", "value": 19.1}, {"date": "2024-01-31", "value": 16.96}, {"date": "2024-02-29", "value": 21.67}, {"date": "2024-03-31", "value": 26.91}, {"date": "2024-04-30", "value": 21.93}, {"date": "2024-05-31", "value": 27.89}, {"date": "2024-06-30", "value": 26.67}, {"date": "2024-07-31", "value": 33.4}, {"date": "2024-08-31", "value": 32.41}, {"date": "2024-09-30", "value": 34.11}, {"date": "2024-10-31", "value": 32.77}, {"date": "2024-11-30", "value": 43.66}, {"date": "2024-12-31", "value": 32.45}, {"date": "2025-01-31", "value": 36.78}, {"date": "2025-02-28", "value": 33.89}, {"date": "2025-03-31", "value": 27.85}, {"date": "2025-04-30", "value": 24.93}, {"date": "2025-05-31", "value": 33.06}, {"date": "2025-06-30", "value": 41.29}, {"date": "2025-07-31", "value": 46.12}, {"date": "2025-08-31", "value": 53.43}, {"date": "2025-09-30", "value": 60.75}, {"date": "2025-10-31", "value": 64.59}, {"date": "2025-11-30", "value": 64.45}, {"date": "2025-12-31", "value": 66.44}, {"date": "2026-01-31", "value": 78.4}, {"date": "2026-02-28", "value": 81.12}, {"date": "2026-03-31", "value": 72.21}, {"date": "2026-04-30", "value": 86.48}]}}</script>
+
+    <section class="landing-section">
+      <p class="landing-section-label">Latest brief</p>
+      <div class="lead-brief">
+        <p class="lead-brief-title">
+          <span class="lead-brief-label">2026-06-07</span><br>
+          <a href="/briefs/2026-06-07.html" class="lead-link lead-brief-link">Day 100: Capital Prices the Narrative as the Physical World Restructures &rarr;</a>
+        </p>
+        <p class="lead-brief-teaser">On June 3, SpaceX filed its prospectus at $135 per share, targeting $75 billion in the largest IPO in history at a valuation of approximately $1.77 trillion. On the same day, Iran attacked Kuwait International Airport with drones and ballistic missiles, and North Korea unveiled a new nuclear fuel production facility with Kim Jong Un pledging exponential arsenal expansion.</p>
+      </div>
+      <p class="landing-section-more"><a href="/briefs.html" class="lead-link">All briefs &rarr;</a></p>
+    </section>
+
+  </div>
+
+  <aside class="landing-right">
+    <p class="landing-rail-label">Holdings</p>
+    <p class="landing-rail-meta">
+      20 active positions
+ &middot; 6 pillars    </p>
+
+    <div class="rail-pillar">
+      <p class="rail-pillar-name">Space</p>
+      <p class="rail-pillar-meta">51.1% &middot; 6 positions</p>
+      <ul class="rail-positions">
+        <li class="rail-position">
+          <a href="/holdings/PL.html" class="rail-ticker">PL</a>
+          <span class="rail-bar"><span class="rail-bar-fill" style="width: 100.0%"></span></span>
+          <span class="rail-weight">25.82%</span>
+        </li>
+        <li class="rail-position">
+          <a href="/holdings/RKLB.html" class="rail-ticker">RKLB</a>
+          <span class="rail-bar"><span class="rail-bar-fill" style="width: 36.0%"></span></span>
+          <span class="rail-weight">9.38%</span>
+        </li>
+        <li class="rail-position">
+          <a href="/holdings/BKSY.html" class="rail-ticker">BKSY</a>
+          <span class="rail-bar"><span class="rail-bar-fill" style="width: 32.0%"></span></span>
+          <span class="rail-weight">8.42%</span>
+        </li>
+        <li class="rail-position">
+          <a href="/holdings/LUNR.html" class="rail-ticker">LUNR</a>
+          <span class="rail-bar"><span class="rail-bar-fill" style="width: 20.0%"></span></span>
+          <span class="rail-weight">5.34%</span>
+        </li>
+        <li class="rail-position">
+          <a href="/holdings/RDW.html" class="rail-ticker">RDW</a>
+          <span class="rail-bar"><span class="rail-bar-fill" style="width: 5.0%"></span></span>
+          <span class="rail-weight">1.32%</span>
+        </li>
+        <li class="rail-position">
+          <a href="/holdings/YSS.html" class="rail-ticker">YSS</a>
+          <span class="rail-bar"><span class="rail-bar-fill" style="width: 3.0%"></span></span>
+          <span class="rail-weight">0.82%</span>
+        </li>
+      </ul>
+    </div>
+    <div class="rail-pillar">
+      <p class="rail-pillar-name">Nuclear</p>
+      <p class="rail-pillar-meta">19.19% &middot; 4 positions</p>
+      <ul class="rail-positions">
+        <li class="rail-position">
+          <a href="/holdings/URG.html" class="rail-ticker">URG</a>
+          <span class="rail-bar"><span class="rail-bar-fill" style="width: 25.0%"></span></span>
+          <span class="rail-weight">6.55%</span>
+        </li>
+        <li class="rail-position">
+          <a href="/holdings/LEU.html" class="rail-ticker">LEU</a>
+          <span class="rail-bar"><span class="rail-bar-fill" style="width: 20.0%"></span></span>
+          <span class="rail-weight">5.37%</span>
+        </li>
+        <li class="rail-position">
+          <a href="/holdings/UUUU.html" class="rail-ticker">UUUU</a>
+          <span class="rail-bar"><span class="rail-bar-fill" style="width: 18.0%"></span></span>
+          <span class="rail-weight">4.69%</span>
+        </li>
+        <li class="rail-position">
+          <a href="/holdings/DNN.html" class="rail-ticker">DNN</a>
+          <span class="rail-bar"><span class="rail-bar-fill" style="width: 9.0%"></span></span>
+          <span class="rail-weight">2.58%</span>
+        </li>
+      </ul>
+    </div>
+    <div class="rail-pillar">
+      <p class="rail-pillar-name">Critical Minerals</p>
+      <p class="rail-pillar-meta">10.56% &middot; 5 positions</p>
+      <ul class="rail-positions">
+        <li class="rail-position">
+          <a href="/holdings/WRN.html" class="rail-ticker">WRN</a>
+          <span class="rail-bar"><span class="rail-bar-fill" style="width: 13.0%"></span></span>
+          <span class="rail-weight">3.6%</span>
+        </li>
+        <li class="rail-position">
+          <a href="/holdings/UAMY.html" class="rail-ticker">UAMY</a>
+          <span class="rail-bar"><span class="rail-bar-fill" style="width: 12.0%"></span></span>
+          <span class="rail-weight">3.16%</span>
+        </li>
+        <li class="rail-position">
+          <a href="/holdings/LYSDY.html" class="rail-ticker">LYSDY</a>
+          <span class="rail-bar"><span class="rail-bar-fill" style="width: 6.0%"></span></span>
+          <span class="rail-weight">1.71%</span>
+        </li>
+        <li class="rail-position">
+          <a href="/holdings/MP.html" class="rail-ticker">MP</a>
+          <span class="rail-bar"><span class="rail-bar-fill" style="width: 6.0%"></span></span>
+          <span class="rail-weight">1.58%</span>
+        </li>
+        <li class="rail-position">
+          <a href="/holdings/REA.html" class="rail-ticker">REA</a>
+          <span class="rail-bar"><span class="rail-bar-fill" style="width: 1.0%"></span></span>
+          <span class="rail-weight">0.51%</span>
+        </li>
+      </ul>
+    </div>
+    <div class="rail-pillar">
+      <p class="rail-pillar-name">Precious Metals</p>
+      <p class="rail-pillar-meta">1.7% &middot; 1 position</p>
+      <ul class="rail-positions">
+        <li class="rail-position">
+          <a href="/holdings/HL.html" class="rail-ticker">HL</a>
+          <span class="rail-bar"><span class="rail-bar-fill" style="width: 6.0%"></span></span>
+          <span class="rail-weight">1.7%</span>
+        </li>
+      </ul>
+    </div>
+    <div class="rail-pillar">
+      <p class="rail-pillar-name">Vault</p>
+      <p class="rail-pillar-meta">15.79% &middot; 2 positions</p>
+      <ul class="rail-positions">
+        <li class="rail-position">
+          <a href="/holdings/D.html" class="rail-ticker">D</a>
+          <span class="rail-bar"><span class="rail-bar-fill" style="width: 35.0%"></span></span>
+          <span class="rail-weight">9.09%</span>
+        </li>
+        <li class="rail-position">
+          <a href="/holdings/WM.html" class="rail-ticker">WM</a>
+          <span class="rail-bar"><span class="rail-bar-fill" style="width: 25.0%"></span></span>
+          <span class="rail-weight">6.7%</span>
+        </li>
+      </ul>
+    </div>
+    <div class="rail-pillar">
+      <p class="rail-pillar-name">Other</p>
+      <p class="rail-pillar-meta">1.67% &middot; 2 positions</p>
+      <ul class="rail-positions">
+        <li class="rail-position">
+          <span class="rail-ticker rail-ticker-static">NVA</span>
+          <span class="rail-bar"><span class="rail-bar-fill" style="width: 5.0%"></span></span>
+          <span class="rail-weight">1.53%</span>
+        </li>
+        <li class="rail-position">
+          <span class="rail-ticker rail-ticker-static">SPCE</span>
+          <span class="rail-bar"><span class="rail-bar-fill" style="width: 0.0%"></span></span>
+          <span class="rail-weight">0.14%</span>
+        </li>
+      </ul>
+    </div>
+
+  </aside>
+
+</div>
+
+<script src="/static/js/chart.js?v=2026-06-10T22:44:57+00:00" defer></script>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-disclosure">
+      Latent Lines is an editorial publication by <a href="https://michaelcsinger.com">Mike C Singer</a>. It is not investment
+      advice and not a solicitation to buy or sell any security. The author holds positions
+      in many of the securities discussed; complete current holdings are disclosed at
+      <a href="/disclosure.html">/disclosure</a>. Past performance does not indicate
+      future results. Do your own research and consult a licensed financial advisor before
+      making investment decisions. Intelligence pipeline by
+      <a href="https://newsplanetai.com">NewsPlanetAI</a>.
+    </p>
+    <p class="footer-meta">Data as of 2026-06-10T22:44:57+00:00.</p>
+  </footer>
+</body>
+</html>
