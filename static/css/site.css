@@ -1,0 +1,1643 @@
+/* Latent (working title) -- minimal text-first CSS.
+ *
+ * Design intent: text-first, serif body, generous whitespace, no
+ * sidebar nav.  Reference: Stratechery, Bits about Money, longform
+ * essay sites.  The publication is a long-read object, not an app.
+ */
+
+:root {
+  --max-width: 720px;
+  --max-width-landing: 1280px;
+  --color-text: #1a1a1a;
+  --color-text-muted: #5a5a5a;
+  --color-accent: #1a4d8c;
+  --color-bg: #fdfdfb;
+  --color-border: #e8e8e3;
+  --color-table-stripe: #f5f5f0;
+  --font-serif: Georgia, "Times New Roman", serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SF Mono", Consolas, "Courier New", monospace;
+}
+
+body.landing .site-main { max-width: var(--max-width-landing); }
+body.wiki .site-main { max-width: var(--max-width-landing); }
+
+* { box-sizing: border-box; }
+
+html {
+  font-size: 17px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-serif);
+  line-height: 1.65;
+  color: var(--color-text);
+  background: var(--color-bg);
+  margin: 0;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ----- header ----- */
+
+.site-header {
+  border-bottom: 1px solid var(--color-border);
+  padding: 1rem 0;
+}
+
+.site-header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.site-title {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+}
+
+.site-title:hover {
+  text-decoration: none;
+}
+
+.site-nav a {
+  margin-left: 1.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: var(--color-text-muted);
+}
+
+.site-nav a:hover {
+  color: var(--color-text);
+}
+
+/* ----- main column ----- */
+
+.site-main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2.5rem 1rem;
+}
+
+/* ----- hero ----- */
+
+.hero {
+  margin-bottom: 3rem;
+}
+
+.hero-headline {
+  font-family: var(--font-serif);
+  font-size: 2.75rem;
+  font-weight: normal;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.1;
+}
+
+.hero-tagline {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  margin: 0 0 0.25rem 0;
+}
+
+.hero-byline {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin: 0 0 2.5rem 0;
+}
+
+/* ----- FT-register hero chart block ----- */
+
+.hero-chart-block {
+  margin-bottom: 3rem;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hero-stat-lifetime {
+  padding-left: 1.5rem;
+  border-left: 1px solid var(--color-border);
+}
+
+.hero-stat-label {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0 0 0.35rem 0;
+}
+
+.hero-stat-number {
+  font-family: var(--font-serif);
+  font-size: 2.75rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.hero-stat-number-secondary {
+  font-size: 1.75rem;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.hero-stat-context {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin: 0.4rem 0 0 0;
+}
+
+.hero-chart-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.hero-chart {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.hero-chart-readout {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  background: rgba(253, 253, 251, 0.95);
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  padding: 6px 9px;
+  pointer-events: none;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.hero-chart-readout .readout-date {
+  margin: 0;
+  font-size: 0.62rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.hero-chart-readout .readout-value {
+  margin: 0;
+  color: var(--color-accent);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.hero-chart-caption {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  margin: 0.75rem 0 0 0;
+  line-height: 1.5;
+}
+
+/* Range cycling controls under the hero chart. Server renders the
+   buttons with [hidden]; chart.js removes the attribute on init so
+   the controls only appear when the JS that drives them is live. */
+.chart-range-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.25rem;
+  margin: 0.5rem 0 0 0;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.chart-range-btn {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 0;
+  padding: 0.35rem 0.6rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+}
+
+.chart-range-btn:hover {
+  color: var(--color-text);
+}
+
+.chart-range-btn.chart-range-btn-active {
+  color: var(--color-text);
+  border-bottom-color: var(--color-accent);
+  font-weight: 600;
+}
+
+.chart-range-btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Benchmark overlay controls -- same pill register as the range
+   controls, with a leading "Compare against" label. Two pills (CMU /
+   TMU) that behave as mutually-exclusive toggles: clicking the active
+   one deselects (returning to "off"); clicking the inactive one
+   switches. chart.js drives the [aria-pressed] state. */
+.chart-benchmark-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.25rem 0 0 0;
+}
+
+.chart-benchmark-label {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+.chart-benchmark-btn {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 0;
+  padding: 0.35rem 0.6rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+}
+
+.chart-benchmark-btn:hover {
+  color: var(--color-text);
+}
+
+.chart-benchmark-btn.chart-benchmark-btn-active {
+  color: var(--color-text);
+  /* The benchmark line on the chart is warm brown (#9b8a6e); the
+     active pill underline matches so the visual link reads. */
+  border-bottom-color: #9b8a6e;
+  font-weight: 600;
+}
+
+.chart-benchmark-btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Inline caption that appears below the chart when a benchmark is
+   active. Names the basket and links to the methodology section. */
+.chart-benchmark-caption {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  margin: 0.4rem 0 0 0;
+  line-height: 1.5;
+}
+
+.chart-benchmark-caption a {
+  color: var(--color-accent);
+}
+
+/* Third line of the hover readout, shown only when a benchmark is
+   active. Warm-brown to match the chart line. */
+.hero-chart-readout .readout-benchmark {
+  margin: 0;
+  color: #9b8a6e;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.lead-in {
+  margin-top: 2rem;
+}
+
+.lead-in p {
+  margin: 0.5rem 0;
+}
+
+.lead-link {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+}
+
+.lead-brief {
+  margin-bottom: 1.5rem !important;
+  padding: 1rem 1.25rem;
+  background: var(--color-table-stripe);
+  border-left: 3px solid var(--color-accent);
+}
+
+.lead-brief-label {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+}
+
+.lead-brief-link {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--color-text);
+}
+
+.lead-brief-title {
+  margin: 0;
+}
+
+.lead-brief-teaser {
+  margin: 0.75rem 0 0;
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+/* ----- ticker page (per-holding deep dive) ----- */
+
+.ticker-page {
+  /* sits in the same column as content-page */
+}
+
+.ticker-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.ticker-meta {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.5rem 0;
+}
+
+.ticker-title {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.ticker-title .ticker-name {
+  font-weight: normal;
+  color: var(--color-text-muted);
+  font-size: 1.4rem;
+  letter-spacing: -0.01em;
+}
+
+.ticker-position-summary {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin: 0.75rem 0 0 0;
+}
+
+.ticker-position-summary .return-positive {
+  color: var(--color-return-positive);
+  font-weight: 600;
+}
+
+.ticker-position-summary .return-negative {
+  color: var(--color-return-negative);
+  font-weight: 600;
+}
+
+.ticker-body {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.ticker-body h2 {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.ticker-body h3 {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.ticker-body p {
+  margin: 1rem 0;
+}
+
+.ticker-body ul,
+.ticker-body ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.ticker-body li {
+  margin: 0.4rem 0;
+}
+
+.ticker-body strong {
+  font-weight: 600;
+}
+
+.ticker-body blockquote {
+  margin: 1.5rem 0;
+  padding: 0.5rem 1.25rem;
+  border-left: 3px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+
+.ticker-footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.ticker-footer a {
+  color: var(--color-text-muted);
+}
+
+.ticker-updated {
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* ----- Forces block on ticker pages (masses-layer cross-reference) ----- */
+
+.ticker-forces {
+  margin: 0 0 2rem 0;
+  padding: 0.75rem 1rem;
+  background: var(--color-table-stripe);
+  border-left: 3px solid var(--color-text-muted);
+}
+
+.ticker-forces-label {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin: 0 0 0.5rem 0;
+}
+
+.ticker-forces-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ticker-force {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0.3rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.ticker-force-name {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.ticker-force-role {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.ticker-force-tier {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.05rem 0.4rem;
+  border-radius: 2px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+
+.ticker-force-tier-structural {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+/* ----- entity page (masses-layer node page) ----- */
+
+.entity-page {
+  /* Inherits column from .site-main */
+}
+
+.entity-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.entity-meta {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.5rem 0;
+}
+
+.entity-title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.entity-position-summary {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin: 0.75rem 0 0 0;
+}
+
+.entity-position-summary a {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.entity-body {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.entity-body h2 {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.entity-body h3 {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.entity-body p {
+  margin: 1rem 0;
+}
+
+.entity-body ul,
+.entity-body ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.entity-body li {
+  margin: 0.4rem 0;
+}
+
+.entity-body strong {
+  font-weight: 600;
+}
+
+.entity-connections {
+  margin-top: 3rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--color-table-stripe);
+  border-left: 3px solid var(--color-accent);
+}
+
+.entity-connections-title {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin: 0 0 0.75rem 0;
+  font-weight: 600;
+}
+
+.entity-connections-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.entity-connection {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0.35rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.entity-connection-ticker {
+  min-width: 4rem;
+  font-weight: 700;
+}
+
+.entity-connection-ticker a {
+  color: var(--color-text);
+}
+
+.entity-connection-role {
+  color: var(--color-text-muted);
+  font-style: italic;
+  flex: 1;
+}
+
+.entity-connection-tier {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.05rem 0.4rem;
+  border-radius: 2px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+
+.entity-connection-tier-structural {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.entity-footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.entity-footer a {
+  color: var(--color-text-muted);
+}
+
+.entity-updated {
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* ----- wiki page (masses-layer graph + indexes) ----- */
+
+.wiki-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  max-width: var(--max-width);
+}
+
+.wiki-title {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.1;
+}
+
+.wiki-intro {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.wiki-graph-section {
+  margin: 0 0 3rem 0;
+}
+
+.wiki-graph-wrapper {
+  position: relative;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.wiki-graph {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.wiki-graph-caption {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin: 0.75rem 0 0 0;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* node + edge interaction states */
+
+.wiki-graph-node {
+  transition: opacity 120ms ease-out;
+}
+
+.wiki-graph-node.is-focused circle,
+.wiki-graph-node.is-focused rect {
+  stroke: var(--color-text);
+  stroke-width: 3;
+}
+
+.wiki-graph-node.is-neighbor circle,
+.wiki-graph-node.is-neighbor rect {
+  stroke: var(--color-text);
+  stroke-width: 2;
+}
+
+.wiki-graph-node.is-dim {
+  opacity: 0.25;
+}
+
+.wiki-graph-edge {
+  transition: opacity 120ms ease-out;
+}
+
+.wiki-graph-edge.is-focused {
+  stroke: var(--color-accent) !important;
+  stroke-opacity: 1 !important;
+  stroke-width: 2 !important;
+}
+
+.wiki-graph-edge.is-dim {
+  opacity: 0.15;
+}
+
+.wiki-graph-tooltip {
+  background: rgba(26, 26, 26, 0.92);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 3px;
+  line-height: 1.4;
+  max-width: 280px;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.wiki-graph-tooltip strong { font-weight: 600; }
+.wiki-graph-tooltip .tier-structural { color: #6fa0d8; font-weight: 600; }
+.wiki-graph-tooltip .tier-backdrop { color: #aaa; font-style: italic; }
+
+/* wiki body -- the rendered canonical index.md content (Imminent
+   Catalysts table, By Tranche, By Thesis, Forces, Watchlist, Active
+   Policies). Reads as a long-form navigation hub. */
+
+.wiki-body {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.65;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.wiki-body h2 {
+  font-family: var(--font-serif);
+  font-size: 1.65rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 3rem 0 0.75rem 0;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.wiki-body h2:first-child {
+  margin-top: 0;
+}
+
+.wiki-body h3 {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin: 1.75rem 0 0.5rem 0;
+}
+
+.wiki-body p {
+  margin: 1rem 0;
+}
+
+.wiki-body ul,
+.wiki-body ol {
+  margin: 0.5rem 0 1.25rem 0;
+  padding-left: 1.5rem;
+}
+
+.wiki-body li {
+  margin: 0.4rem 0;
+  line-height: 1.55;
+}
+
+.wiki-body li strong {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.wiki-body a {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.wiki-body hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 2.5rem 0;
+}
+
+.wiki-body em {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* Imminent Catalysts table */
+.wiki-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.5rem 0;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+}
+
+.wiki-body thead th {
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  padding: 0.5rem 0.75rem;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.wiki-body tbody td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+}
+
+.wiki-body tbody tr:hover {
+  background: var(--color-table-stripe);
+}
+
+/* ----- brief page ----- */
+
+.brief-page {
+  /* Inherits from content-page styling via siblings */
+}
+
+.brief-header {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 1.5rem;
+}
+
+.brief-date {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  margin: 0 0 0.5rem 0;
+}
+
+.brief-title {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  font-weight: normal;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.15;
+}
+
+.brief-byline {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin: 0;
+  font-style: italic;
+}
+
+.brief-body {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.brief-body h1,
+.brief-body h2,
+.brief-body h3 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.brief-body h2 { font-size: 1.4rem; }
+.brief-body h3 { font-size: 1.15rem; }
+
+.brief-body p { margin: 1rem 0; }
+
+.brief-body ul,
+.brief-body ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.brief-body li { margin: 0.5rem 0; }
+
+.brief-body blockquote {
+  margin: 1.5rem 0;
+  padding: 0.5rem 1.25rem;
+  border-left: 3px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.brief-footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.brief-footer a {
+  color: var(--color-text-muted);
+}
+
+/* ----- briefs archive ----- */
+
+.brief-archive {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.brief-archive li {
+  border-bottom: 1px solid var(--color-border);
+  padding: 0.85rem 0;
+  font-family: var(--font-serif);
+}
+
+.brief-archive a {
+  font-size: 1.05rem;
+}
+
+.brief-archive-date {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-left: 0.5rem;
+}
+
+/* ----- content pages (thesis, about) ----- */
+
+.content-page h1 {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  font-weight: normal;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.15;
+}
+
+.content-page h2 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.content-page h3 {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.content-page p {
+  margin: 1rem 0;
+}
+
+.content-page strong {
+  font-weight: 600;
+}
+
+.content-page em {
+  font-style: italic;
+}
+
+.content-page blockquote {
+  margin: 1.5rem 0;
+  padding: 0.5rem 1.25rem;
+  border-left: 3px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.content-page ul,
+.content-page ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.content-page li {
+  margin: 0.5rem 0;
+}
+
+.content-page code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: var(--color-table-stripe);
+  padding: 0.1em 0.3em;
+  border-radius: 2px;
+}
+
+.content-page hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 2rem 0;
+}
+
+/* ----- holdings table (disclosure page) ----- */
+
+:root {
+  --color-return-positive: #2a6f3e;
+  --color-return-negative: #a64b2a;
+}
+
+.disclosure-lede {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin: 1rem 0 2rem 0;
+}
+
+.holdings-group {
+  margin: 1.5rem 0 2rem 0;
+}
+
+.holdings-group-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.holdings-group-name {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.holdings-group-meta {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.holdings-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.holdings-table th,
+.holdings-table td {
+  border-bottom: 1px solid var(--color-border);
+  padding: 0.5rem 0.4rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.holdings-table th {
+  font-weight: 600;
+  color: var(--color-text-muted);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.holdings-table .ticker {
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+
+.holdings-table .num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.holdings-table .return-positive {
+  color: var(--color-return-positive);
+  font-weight: 600;
+}
+
+.holdings-table .return-negative {
+  color: var(--color-return-negative);
+  font-weight: 600;
+}
+
+.holdings-table .thesis-node {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.table-note {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-top: 1.5rem;
+}
+
+.disclosure-prose {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+/* ----- footer ----- */
+
+.site-footer {
+  max-width: var(--max-width);
+  margin: 4rem auto 2rem auto;
+  padding: 2rem 1rem 1rem 1rem;
+  border-top: 1px solid var(--color-border);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.footer-disclosure {
+  line-height: 1.55;
+  margin: 0;
+}
+
+.footer-meta {
+  margin: 0.75rem 0 0 0;
+  font-style: italic;
+}
+
+/* ============================================================
+   Landing page — three-column grid (proof-of-method surface)
+   ============================================================ */
+
+/* Centered masthead band + divider, clearly separated from the
+   three-column area below. */
+body.landing .hero {
+  text-align: center;
+  margin: 1rem 0 0 0;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-divider {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 2.5rem 0 2.5rem 0;
+  max-width: var(--max-width-landing);
+}
+
+.landing-grid {
+  display: grid;
+  grid-template-columns: minmax(240px, 280px) minmax(0, 1fr) minmax(240px, 280px);
+  gap: 2.5rem;
+  margin-top: 0;
+}
+
+/* Left-column swap region: only the primer/readout swap; the daily
+   feed below sits outside this swap and is always visible. */
+.landing-left-swap {
+  margin-bottom: 2rem;
+}
+
+.landing-left,
+.landing-right {
+  font-family: var(--font-sans);
+}
+
+.landing-center {
+  min-width: 0;
+}
+
+/* shared small-caps rail label */
+.landing-rail-label {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  margin: 0 0 0.75rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ----- LEFT column: primer + readout ----- */
+
+.landing-primer p,
+.landing-readout p {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--color-text);
+  margin: 0 0 1.1rem 0;
+}
+
+.landing-primer p:first-of-type,
+.landing-readout p:first-of-type {
+  margin-top: 0;
+}
+
+/* Readout heading row (period + cumulative context) */
+.landing-readout .readout-period {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin: 0 0 0.4rem 0;
+  line-height: 1.1;
+}
+
+.landing-readout .readout-context {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  margin: 0 0 1.25rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Status messages (loading / error / empty) */
+.landing-readout .readout-status {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin: 1.5rem 0;
+  line-height: 1.5;
+}
+
+/* Briefings list */
+.landing-readout .readout-briefings {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+.landing-readout .readout-brief {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.landing-readout .readout-brief:last-child {
+  border-bottom: none;
+}
+
+.landing-readout .readout-brief-link {
+  display: block;
+  padding: 0.7rem 0;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.landing-readout .readout-brief-link:hover {
+  text-decoration: none;
+  color: var(--color-accent);
+}
+
+.landing-readout .readout-brief-link:hover .readout-brief-snippet {
+  color: var(--color-accent);
+}
+
+.landing-readout .readout-brief-date {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin: 0 0 0.25rem 0;
+}
+
+.landing-readout .readout-brief-snippet {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--color-text);
+  margin: 0;
+}
+
+
+.landing-readout .readout-back {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.landing-readout .readout-back:hover {
+  color: var(--color-text);
+  text-decoration: underline;
+}
+
+.landing-readout .readout-back-wrap {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+/* Bottom-of-left-column attribution (replaces the old standing feed) */
+.landing-attribution {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.landing-attribution a {
+  color: var(--color-text-muted);
+}
+
+.landing-attribution a:hover {
+  color: var(--color-text);
+}
+
+/* ----- CENTER column: chart + brief + NPAI feed ----- */
+
+.landing-center .hero-stats {
+  margin-top: 0;
+}
+
+.landing-center .hero-chart-wrapper {
+  margin-top: 0;
+}
+
+.landing-section {
+  margin: 2.5rem 0 0 0;
+}
+
+.landing-section-label {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  margin: 0 0 0.75rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.landing-section-sub {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin: -0.25rem 0 1rem 0;
+}
+
+.landing-section-more {
+  margin: 1rem 0 0 0;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+}
+
+/* daily feed (NPAI) */
+.daily-feed {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.daily-feed-item {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.daily-feed-item:last-child {
+  border-bottom: none;
+}
+
+.daily-feed-date {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin: 0 0 0.3rem 0;
+}
+
+.daily-feed-topics {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-text);
+  margin: 0;
+}
+
+/* ----- RIGHT column: holdings rail ----- */
+
+.landing-rail-meta {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin: -0.5rem 0 1.5rem 0;
+}
+
+.rail-pillar {
+  margin-bottom: 1.5rem;
+}
+
+.rail-pillar-name {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+  margin: 0 0 0.15rem 0;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 0.3rem;
+}
+
+.rail-pillar-meta {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0.35rem 0 0.6rem 0;
+}
+
+.rail-positions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rail-position {
+  display: grid;
+  grid-template-columns: 3.2rem 1fr 2.6rem;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+}
+
+.rail-ticker {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: var(--color-text);
+}
+
+.rail-ticker-static {
+  color: var(--color-text);
+}
+
+a.rail-ticker:hover {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.rail-bar {
+  display: block;
+  height: 4px;
+  background: var(--color-table-stripe);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.rail-bar-fill {
+  display: block;
+  height: 100%;
+  background: var(--color-accent);
+  opacity: 0.6;
+  border-radius: 2px;
+}
+
+.rail-weight {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+
+/* ----- Landing mobile collapse: center → primer → holdings ----- */
+
+@media (max-width: 1099px) {
+  .landing-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .landing-left  { order: 2; }
+  .landing-center { order: 1; }
+  .landing-right { order: 3; }
+
+  .landing-primer p,
+  .landing-readout p {
+    font-size: 1rem;
+  }
+}
+
+/* ----- small screens ----- */
+
+@media (max-width: 600px) {
+  html { font-size: 16px; }
+  .hero-headline { font-size: 2.25rem; }
+  .hero-stat-number { font-size: 2.2rem; }
+  .hero-stat-number-secondary { font-size: 1.5rem; }
+  .hero-stats { grid-template-columns: 1fr; gap: 1.25rem; }
+  .hero-stat-lifetime { padding-left: 0; border-left: 0; padding-top: 1rem; border-top: 1px solid var(--color-border); }
+  .site-header-inner { flex-direction: column; align-items: flex-start; }
+  .site-nav { margin-top: 0.5rem; }
+  .site-nav a { margin-left: 0; margin-right: 1rem; }
+  .holdings-table { font-size: 0.85rem; }
+}
